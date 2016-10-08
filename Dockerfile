@@ -22,6 +22,7 @@ RUN env --unset=DEBIAN_FRONTEND
 RUN pip3 install numpy
 
 # build biopython from source
+ENV BUILD_HOME /build/
 RUN mkdir ${BUILD_HOME}
 WORKDIR ${BUILD_HOME}
 RUN wget https://github.com/biopython/biopython/archive/master.zip
